@@ -1,11 +1,17 @@
 #include <iostream>
 using namespace std;
 
+void update(int *p)
+{
+    *p = *p +1;
+}
+
 int main()
 {
 
     // POINTER IN AN ARRAY
 
+/*
     //Integer Array
     int arr[10] = {2, 4, 6, 8, 10};
     cout << "Address of 1st memory = " << arr << endl;
@@ -36,5 +42,20 @@ int main()
     cout<<ptr<<endl;            //The address of next array block will get loaded in the pointer  
     ptr++;
     cout<<ptr<<endl;
+
+
+    //CHARACTER ARRAY
+    char ch[10] = "abcde";
+    char *c = &ch[0];
+    cout<< c << endl;       //Here due to char data type the cout function will print the entier character array 
+*/
+
+//Pointer and Functions 
+
+    int value = 5;
+    int *p = &value;
+    cout<<"Value before update = "<< *p <<endl;
+    update(p);
+    cout<<"Value after update = "<< *p <<endl;
     return 0;
 }
