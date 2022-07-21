@@ -4,7 +4,6 @@
 3. It is possible through inheritance only
 */
 
-
 #include<iostream>
 using namespace std;
 class Human
