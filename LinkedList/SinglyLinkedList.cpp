@@ -15,6 +15,17 @@ class Node
         this -> data = data;
         this -> next = NULL;
     }
+
+    ~Node()
+    {
+        int value = this -> data;
+        if(this->next != NULL)
+        {
+            delete next;
+            this->next = NULL;
+        }
+        cout<<"Momory is free for node with data "<< value <<endl;
+    }
 };
 
 //Inset at the head
@@ -74,6 +85,37 @@ void print(Node* &head)
     cout << endl;
 }
 
+//delete the value at the position 
+void deleteNode(int pos, Node * &head)
+{
+    //deleting start node
+  if(pos == 1 )
+  {
+    Node* temp = head;
+    head = head->next;
+    temp -> next = NULL;
+    delete temp;
+  }  
+
+//deleting any node or the last node
+  else
+  {
+    Node* curr = head;
+    Node * prev = NULL;
+
+    int cnt = 1;
+    while(cnt <= pos)
+    {
+        prev = curr;
+        curr = curr->next;
+        cnt++;
+    }
+    prev->next = curr->next;
+    curr->next = NULL;
+    delete curr;
+  }
+}
+
 int main()
 {
     Node * node1 = new Node(10);        //Dyanamically creating the object for Node class
@@ -82,6 +124,8 @@ int main()
     InsertAtTail(tail, 12);
     InsertAtTail(tail, 13);
     InsertAtPosition(head, tail, 2, 11);
+    print(head);
+    deleteNode(1,head);
     print(head);
  return 0;   
 }
