@@ -104,7 +104,7 @@ void deleteNode(int pos, Node * &head)
     Node * prev = NULL;
 
     int cnt = 1;
-    while(cnt <= pos)
+    while(cnt < pos)
     {
         prev = curr;
         curr = curr->next;
