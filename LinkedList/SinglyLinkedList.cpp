@@ -29,19 +29,39 @@ class Node
 };
 
 //Inset at the head
-void InsertAtHead(Node* &head, int data)
+void InsertAtHead(Node* &head, Node* &tail, int data)
 {
-    Node * temp = new Node(data);
-    temp -> next = head;
-    head = temp;
+    if(head == NULL)
+    {
+        Node* temp = new Node(data);
+        head = temp;
+        tail = temp;
+    }
+
+    else
+    {
+        Node * temp = new Node(data);
+        temp -> next = head;
+        head = temp;
+    }
+
 }
 
 //Insert at the end 
-void InsertAtTail(Node * &tail, int data)
+void InsertAtTail(Node* &head, Node * &tail, int data)
 {
-    Node* temp = new Node(data);
-    tail -> next = temp;
-    tail = temp;
+    if(tail == NULL)
+    {
+        Node* temp = new Node(data);
+        head = temp;
+        tail = temp;
+    }
+    else
+    {
+        Node* temp = new Node(data);
+        tail -> next = temp;
+        tail = temp;
+    }
 }
 
 //Insert at the middle
@@ -50,7 +70,7 @@ void InsertAtPosition(Node* &head, Node* &tail, int pos, int data)
     //Insert at the start
     if(pos == 1)
     {
-        InsertAtHead(head, data);
+        InsertAtHead(head,tail, data);
         return;
     }
 
@@ -65,7 +85,7 @@ void InsertAtPosition(Node* &head, Node* &tail, int pos, int data)
     //Insert at the end
     if(temp -> next = NULL)
     {
-        InsertAtTail(tail, data);
+        InsertAtTail(head, tail, data);
         return;
     }
     //creating a node for data
@@ -118,21 +138,21 @@ void deleteNode(int pos, Node * &head)
 
 int main()
 {
-    Node * node1 = new Node(10);        //Dyanamically creating the object for Node class
-    Node * head = node1;
-    Node * tail = node1;
+    //  Node * node1 = new Node(10);    Dyanamically creating the object for Node class
+    Node * head = NULL;
+    Node * tail = NULL;
     print(head);
 
-    InsertAtTail(tail, 11);
+    InsertAtTail(head, tail, 11);
     print(head);
 
-    InsertAtTail(tail, 12);
+    InsertAtTail(head, tail, 12);
     print(head);
 
-    InsertAtPosition(head, tail, 4, 22);
+    InsertAtPosition(head, tail, 3, 22);
     print(head);
 
-    deleteNode(4,head);
+    deleteNode(3,head);
     print(head);
     cout<<"Head = "<< head->data << endl;
     cout<<"Tail = "<< tail->data << endl;

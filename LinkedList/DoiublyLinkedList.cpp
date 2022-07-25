@@ -15,6 +15,7 @@ public:
     }
 };
 
+// Traversing the linked list
 void print(Node *head)
 {
     Node *temp = head;
@@ -27,12 +28,12 @@ void print(Node *head)
     cout << endl;
 }
 
-
-int getLength(Node* head)
+// Length of the linked list
+int getLength(Node *head)
 {
     int len = 0;
     Node *temp = head;
-    while(temp !=NULL)
+    while (temp != NULL)
     {
         len++;
         temp = temp->next;
@@ -40,12 +41,24 @@ int getLength(Node* head)
     return len;
 }
 
+void InsertAtHead(Node *&head, int d)
+{
+    Node* temp = new Node(d);
+    temp -> next = head;
+    head -> prev = temp;
+    head = temp;
+}
 
 int main()
 {
     Node *first = new Node(10);
     Node *head = first;
-    print(head); 
-    cout<<"Length of the linked List = "<<getLength(head)<<endl;
+    print(head);
+    cout << "Length of the DLL is " << getLength(head) << endl;
+
+    InsertAtHead(head, 11);
+    print(head);
+    cout << "Length of the DLL is " << getLength(head) << endl;
+
     return 0;
 }
