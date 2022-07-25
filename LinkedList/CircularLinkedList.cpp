@@ -37,6 +37,7 @@ void insertNode(Node* &tail, int data, int element)
     else
     {
         //non-empty list
+        //Assuming that any value is present in the Circular linked list 
         Node* curr = tail;
         while(curr->data !=element)
         {
@@ -50,6 +51,8 @@ void insertNode(Node* &tail, int data, int element)
 
 void print(Node* &tail)
 {
+    if(tail == NULL)
+        cout<<"List is empty"<<endl;
     Node* temp = tail;
     do
     {
@@ -60,15 +63,60 @@ void print(Node* &tail)
     
 }
 
+void deleteNode(Node* &tail, int element)
+{
+    if(tail == NULL)
+    {
+        cout<<"List is empty"<<endl;
+        return;
+    }
+    else
+    {
+        //Assumint that any value is present in the Circular Linked List
+        Node* prev = tail;
+        Node* curr = prev->next;
+
+        while(curr->data != element)
+        {
+            prev = curr;
+            curr = curr->next;
+        }
+
+        prev->next = curr->next;
+        
+        //1 NOde linked list
+        if(curr == prev)
+            tail =NULL;
+
+        //>2Nodes in a Linked List
+        else if(curr != prev)
+            tail = prev;
+
+        if(tail == curr)
+            tail = prev;
+        curr->next = NULL;
+        delete curr;
+    }
+}
+
+
 int main()
 {
     Node* tail = NULL;
     insertNode(tail,1,3);
     print(tail);
-    cout<<"Tail = "<<tail->data<<endl;
+    // cout<<"Tail = "<<tail->data<<endl;
 
     insertNode(tail, 2, 1);
     print(tail);
-    cout<<"Tail = "<<tail->data<<endl;
+
+    insertNode(tail, 3, 2);
+    print(tail);
+    
+    insertNode(tail, 4, 3);
+    print(tail);
+
+    deleteNode(tail,1);
+    print(tail);
     return 0;
 }
