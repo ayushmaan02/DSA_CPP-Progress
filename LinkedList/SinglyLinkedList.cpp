@@ -121,11 +121,21 @@ int main()
     Node * node1 = new Node(10);        //Dyanamically creating the object for Node class
     Node * head = node1;
     Node * tail = node1;
+    print(head);
+
+    InsertAtTail(tail, 11);
+    print(head);
+
     InsertAtTail(tail, 12);
-    InsertAtTail(tail, 13);
-    InsertAtPosition(head, tail, 2, 11);
     print(head);
-    deleteNode(1,head);
+
+    InsertAtPosition(head, tail, 4, 22);
     print(head);
+
+    deleteNode(4,head);
+    print(head);
+    cout<<"Head = "<< head->data << endl;
+    cout<<"Tail = "<< tail->data << endl;
+
  return 0;   
 }
