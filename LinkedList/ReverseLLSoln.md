@@ -5,6 +5,7 @@
 - Current next stores the previous value 
 - previous shift to current position 
 - then current shift to forward
+- T.C = 0(n), S.C. = 0(1)
 
 ```
 Node* reverseLinkedList(Node *head)
