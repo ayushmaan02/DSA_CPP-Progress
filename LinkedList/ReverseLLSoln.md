@@ -1,4 +1,4 @@
-### Reverse LL Solution
+# Reverse LL Solution
 -  Solved using 2 Pointer approach 
 - Iterative and Recursive
 - Forward stores the rest of the list
@@ -7,9 +7,8 @@
 - then current shift to forward
 - T.C = 0(n), S.C. = 0(1)
 
+## Iterative Solution
 ```
-- Iterative Solution
-
 Node* reverseLinkedList(Node *head)
 {
     if(head == NULL || head -> next == NULL)
@@ -30,8 +29,10 @@ Node* reverseLinkedList(Node *head)
 
     return prev;
 }
+```
+## Recursive Solution
 
-- Recursive Solution
+```
 Node* reverse(Node* head)
 {
     //base case
@@ -47,5 +48,4 @@ Node* reverse(Node* head)
 
     return chotaHead;
 }
-
 ```
