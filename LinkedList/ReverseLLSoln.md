@@ -5,7 +5,8 @@
 - Current next stores the previous value 
 - previous shift to current position 
 - then current shift to forward
-- T.C = 0(n), S.C. = 0(1)
+- Iterative T.C = 0(n), S.C. = 0(1)
+- Recursive T.C = 0(n), S.C. = 0(n)
 
 ## Iterative Solution
 ```
