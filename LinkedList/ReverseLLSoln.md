@@ -1,6 +1,6 @@
 ### Reverse LL Solution
 -  Solved using 2 Pointer approach 
-- Iterative
+- Iterative and Recursive
 - Forward stores the rest of the list
 - Current next stores the previous value 
 - previous shift to current position 
@@ -8,6 +8,8 @@
 - T.C = 0(n), S.C. = 0(1)
 
 ```
+- Iterative Solution
+
 Node* reverseLinkedList(Node *head)
 {
     if(head == NULL || head -> next == NULL)
@@ -28,4 +30,22 @@ Node* reverseLinkedList(Node *head)
 
     return prev;
 }
+
+- Recursive Solution
+Node* reverse(Node* head)
+{
+    //base case
+    if(head == NULL || Head -> next == NULL)
+    {
+        return head;
+    }
+
+    Node* chotaHead = reverse(head -> next);
+
+    head -> next -> next = head;
+    head -> next = NULL;
+
+    return chotaHead;
+}
+
 ```
