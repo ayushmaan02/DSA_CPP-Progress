@@ -1,6 +1,6 @@
 # Linked List IMP Question 
 
-- [**Middle of a LinkedList**]()
+- [**Middle of a LinkedList**](MiddleofLL.md)
 - [**Delete middle of LL**]()
 - [**Detect Loop & Remove loop from a LL**]()
 - [**Reverse a LL**](ReverseLLSoln.md)
