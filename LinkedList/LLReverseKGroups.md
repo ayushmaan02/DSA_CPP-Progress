@@ -2,11 +2,10 @@
 - Step 1 Reverse the LL using the reverse concept for initial k group
 - Step 2 recursive call initiated for the remaining part
 - Step 3 return the prev as the head for the reverse LL will be pointed by that only
-
+- T.C. O(n) S.C. O(1)
 
 ## Recursive Solution
 ```
-
 Node* kReverse(Node* head, int k) {
     // Write your code here.
     //base case
