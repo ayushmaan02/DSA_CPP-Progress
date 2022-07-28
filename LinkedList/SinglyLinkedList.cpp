@@ -2,6 +2,7 @@
 //Head is the start node of the linked list 
 //Tail is the last of the node 
 #include<iostream>
+#include<map>
 using namespace std;
 class Node
 {
@@ -136,6 +137,28 @@ void deleteNode(int pos, Node * &head)
   }
 }
 
+//TO check the loop is present or not inside the LL
+bool detectLoop(Node* head)
+{
+    if(head == NULL)
+    {
+        return false;
+    }
+    map<Node*, bool>visited;
+
+    Node* temp = head;
+    while(temp != NULL)
+    {
+        if(visited[temp] == true)
+        {
+            return true;
+        }
+        visited[temp] = true;
+        temp = temp->next;
+    }
+    return false;
+}
+
 int main()
 {
     //  Node * node1 = new Node(10);    Dyanamically creating the object for Node class
@@ -152,10 +175,19 @@ int main()
     InsertAtPosition(head, tail, 3, 22);
     print(head);
 
-    deleteNode(3,head);
-    print(head);
+    // deleteNode(3,head);
+    // print(head);
+    tail->next = head->next;            //to check the loop it is only added
     cout<<"Head = "<< head->data << endl;
     cout<<"Tail = "<< tail->data << endl;
+    
 
+    if(detectLoop(head))
+    {
+        cout<<"Loop detected";
+    }
+    else{
+        cout<<"No cycle detected";
+    }
  return 0;   
 }
