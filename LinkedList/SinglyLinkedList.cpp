@@ -158,7 +158,7 @@ bool detectLoop(Node* head)
     }
     return false;
 }
-
+//To check the loop is present or not inside the LL
 Node*  FloydsDetectionLoop(Node* head)
 {
     if(head == NULL)
@@ -179,6 +179,25 @@ Node*  FloydsDetectionLoop(Node* head)
     }
     return NULL;
 }
+
+//Get the starting node of the Loop
+Node* getTheStartingNodeofLoop(Node* head)
+{
+    if(head == NULL)
+        return NULL;
+    
+    Node* interction = FloydsDetectionLoop(head);
+    Node* slow = head;
+
+    while (slow != interction)
+    {
+        slow = slow->next;
+        interction = interction->next;
+    }
+    return slow;
+    
+}
+
 
 int main()
 {
@@ -205,10 +224,12 @@ int main()
 
     if(FloydsDetectionLoop(head) != NULL)
     {
-        cout<<"Loop detected";
+        cout<<"Loop detected"<<endl;
     }
     else{
-        cout<<"No loop detected";
+        cout<<"No loop detected"<<endl;
     }
+
+    cout<<"The starting node of the loop = "<<getTheStartingNodeofLoop(head) -> data;
  return 0;   
 }

@@ -2,10 +2,13 @@
 **DETECT A LOOP**
 - Using map to store for each node is visited or not
 - If the node is visited once and again visiting then the loop is present
-- S.C. O(n) T.C. O(n)
+- Using **Flyod's cycle detction algorithm** where we use two pointers 
+- Slow traverse one node at a time and fast traverse 2 nodes at a time 
+- If slow and fast meets then the loop is detected in LL otherwise no loop present
 
 ## Detect a loop Using map solution
 ```
+    S.C. O(n) T.C. O(n)
 bool detectLoop(Node* head)
 {
     if(head == NULL)
@@ -26,9 +29,11 @@ bool detectLoop(Node* head)
     }
     return false;
 }
+
 ```
 ## Detect a loop using FLyod's cycle detection in LL
 ```
+- S.C. O(1) T.C. O(n)
 Node*  FloydsDetectionLoop(Node* head)
 {
     if(head == NULL)
@@ -51,3 +56,21 @@ Node*  FloydsDetectionLoop(Node* head)
 }
 
 ``` 
+
+## Detect the begining/starting node of the loop
+```
+Node* getTheStartingNodeofLoop(Node* head)
+{
+    if(head == NULL)
+        return NULL;
+    Node* intersection = FloydsDetectionLoop(head);
+    Node* slow = head;
+
+    while(slow != intersection)
+    {
+        slow = slow->next;
+        intersection = intersection->next;
+    }
+    return slow;
+}
+```
