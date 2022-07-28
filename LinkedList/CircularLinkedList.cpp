@@ -84,7 +84,7 @@ void deleteNode(Node* &tail, int element)
 
         prev->next = curr->next;
         
-        //1 NOde linked list
+        //1 Node linked list
         if(curr == prev)
             tail =NULL;
 
@@ -99,6 +99,21 @@ void deleteNode(Node* &tail, int element)
     }
 }
 
+bool isCircular(Node* head)
+{
+    if(head == NULL)
+        return true;
+    Node* temp = head->next;
+
+    while(temp!=NULL && temp!=head)
+    {
+        temp = temp->next;
+    }
+
+    if(temp == head)
+        return true;
+    return false;
+}
 
 int main()
 {
@@ -116,7 +131,15 @@ int main()
     insertNode(tail, 4, 3);
     print(tail);
 
-    deleteNode(tail,1);
-    print(tail);
+    if(isCircular(tail))
+    {
+        cout<<"Circular"<<endl;
+    }
+    else
+    {
+        cout<<"Not Circular"<<endl;
+    }
+    // deleteNode(tail,1);
+    // print(tail);
     return 0;
 }
