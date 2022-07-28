@@ -5,6 +5,11 @@
 - Using **Flyod's cycle detction algorithm** where we use two pointers 
 - Slow traverse one node at a time and fast traverse 2 nodes at a time 
 - If slow and fast meets then the loop is detected in LL otherwise no loop present
+**DETECT THE STARTING/BEGNING NODE OF THE LOOP**
+- Using FCD we found the position where the two pointers will be intersecting
+- then we shift the slow pointer to the head and then 
+- started to traverse the slow and the that intersection pointer one by one 
+- then after some time they will meet at and where they will be meeting will be the starting node of the loop 
 
 ## Detect a loop Using map solution
 ```
@@ -72,5 +77,21 @@ Node* getTheStartingNodeofLoop(Node* head)
         intersection = intersection->next;
     }
     return slow;
+}
+```
+
+## Remove the loop
+```
+void RemoveTheLoop(Node* head)
+{
+    if(head == NULL)
+        return;
+    Node* startNodeOfLoop = getTheStartingNodeofLoop(head);
+    Node* temp = startNodeOfLoop;
+    while(temp -> next != startNodeOfLoop)
+    {
+        temp = temp ->next;
+    }
+    temp->next = NULL;
 }
 ```
