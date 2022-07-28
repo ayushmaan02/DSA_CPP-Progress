@@ -5,7 +5,9 @@
 - Using **Flyod's cycle detction algorithm** where we use two pointers 
 - Slow traverse one node at a time and fast traverse 2 nodes at a time 
 - If slow and fast meets then the loop is detected in LL otherwise no loop present
+
 **DETECT THE STARTING/BEGNING NODE OF THE LOOP**
+
 - Using FCD we found the position where the two pointers will be intersecting
 - then we shift the slow pointer to the head and then 
 - started to traverse the slow and the that intersection pointer one by one 
@@ -38,7 +40,7 @@ bool detectLoop(Node* head)
 ```
 ## Detect a loop using FLyod's cycle detection in LL
 ```
-- S.C. O(1) T.C. O(n)
+ S.C. O(1) T.C. O(n)
 Node*  FloydsDetectionLoop(Node* head)
 {
     if(head == NULL)
