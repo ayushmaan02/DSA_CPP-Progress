@@ -159,6 +159,27 @@ bool detectLoop(Node* head)
     return false;
 }
 
+Node*  FloydsDetectionLoop(Node* head)
+{
+    if(head == NULL)
+        return NULL;
+    Node* slow = head;
+    Node* fast = head;
+
+    while(slow != NULL && fast != NULL)
+    {
+        fast = fast->next;
+        if(fast != NULL)
+            fast = fast->next;
+
+        slow = slow->next;  
+
+        if(slow == fast)
+            return slow;
+    }
+    return NULL;
+}
+
 int main()
 {
     //  Node * node1 = new Node(10);    Dyanamically creating the object for Node class
@@ -182,12 +203,12 @@ int main()
     cout<<"Tail = "<< tail->data << endl;
     
 
-    if(detectLoop(head))
+    if(FloydsDetectionLoop(head) != NULL)
     {
         cout<<"Loop detected";
     }
     else{
-        cout<<"No cycle detected";
+        cout<<"No loop detected";
     }
  return 0;   
 }
