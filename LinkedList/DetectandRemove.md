@@ -2,7 +2,7 @@
 **DETECT A LOOP**
 - Using map to store for each node is visited or not
 - If the node is visited once and again visiting then the loop is present
-- Using **Flyod's cycle detction algorithm** where we use two pointers 
+- Using **Floyd's cycle detction algorithm** where we use two pointers 
 - Slow traverse one node at a time and fast traverse 2 nodes at a time 
 - If slow and fast meets then the loop is detected in LL otherwise no loop present
 
@@ -38,7 +38,7 @@ bool detectLoop(Node* head)
 }
 
 ```
-## Detect a loop using FLyod's cycle detection in LL
+## Detect a loop using Floyd's cycle detection in LL
 ```
  S.C. O(1) T.C. O(n)
 Node*  FloydsDetectionLoop(Node* head)
