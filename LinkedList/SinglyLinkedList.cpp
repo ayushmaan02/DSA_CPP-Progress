@@ -84,7 +84,7 @@ void InsertAtPosition(Node* &head, Node* &tail, int pos, int data)
     }
 
     //Insert at the end
-    if(temp -> next = NULL)
+    if(temp -> next == NULL)
     {
         InsertAtTail(head, tail, data);
         return;
@@ -198,6 +198,21 @@ Node* getTheStartingNodeofLoop(Node* head)
     
 }
 
+//Remove the loop
+void RemoveTheLoop(Node* head)
+{
+    if(head == NULL)
+        return;
+    
+    Node* StartOfLoop = getTheStartingNodeofLoop(head);
+    Node* temp = StartOfLoop;
+    while (temp -> next != StartOfLoop)
+    {
+        temp = temp->next;
+    }
+    temp->next = NULL;
+    
+}
 
 int main()
 {
@@ -218,10 +233,8 @@ int main()
     // deleteNode(3,head);
     // print(head);
     tail->next = head->next;            //to check the loop it is only added
-    cout<<"Head = "<< head->data << endl;
-    cout<<"Tail = "<< tail->data << endl;
-    
 
+    //check weather their is loop or not 
     if(FloydsDetectionLoop(head) != NULL)
     {
         cout<<"Loop detected"<<endl;
@@ -230,6 +243,11 @@ int main()
         cout<<"No loop detected"<<endl;
     }
 
-    cout<<"The starting node of the loop = "<<getTheStartingNodeofLoop(head) -> data;
+    //Return the starting node of the loop
+    cout<<"The starting node of the loop = "<<getTheStartingNodeofLoop(head) -> data<<endl;
+
+    //Remove the loop 
+    RemoveTheLoop(head);
+    print(head);
  return 0;   
 }
