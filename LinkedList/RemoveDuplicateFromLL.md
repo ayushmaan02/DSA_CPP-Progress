@@ -6,10 +6,9 @@
 - Link the current node to the node which is next to the deleted node
 - Else this is not then simply move forward the current node.
 
-**Remove Duplicates From Un-Sorted List**
-
 ## Remove Duplicates From Sorted List
 ```
+    T.C. O(n) S.C. O(1)
 Node * uniqueSortedList(Node * head) 
 {
     //List is empty
