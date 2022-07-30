@@ -2,12 +2,12 @@
 
 **Sort 0s 1s and 2s in the LL**
 
-*APPROACH 1*
+**APPROACH 1 REPLACING THE DATA**
 - Take 3 counts for counting 0,1 and 2 respectively
 - Traverse through the LL and count the 0,1 and 2 in the LL
 - Then again traverse through the LL and for each count print the value in sorted manner
 
-*APPROACH 2*
+**APPROACH 2 REPLACING THE LINKS** (*When data replacement is not allowed*) 
 - Take 3 dummy nodes
 - Traverse through the list and compare the value at each node and then add it to tail of the node
 - Then merge the all the 0s,1s,2s nodes 
@@ -58,6 +58,7 @@ Node* sortList(Node* head)
 
 **APPROACH 2**
 ```
+    T.C O(n) S.C. O(1)
 void insertAtTail(Node* &tail, Node* curr)
 {
     tail -> next = curr;
