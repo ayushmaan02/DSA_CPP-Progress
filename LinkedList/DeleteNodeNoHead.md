@@ -3,7 +3,8 @@
 - Initialize a new node and assign it to next of node to delete
 - Then copy the value of the next node to the node to delete
 - Then copy the link of the neighbouring node to the node to delete
-- Then delete the new node  
+- Then delete the new node
+> Codestudio questions  
 
 ```
 void deleteNode(Node* node)

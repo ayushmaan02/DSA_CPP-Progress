@@ -5,6 +5,7 @@
 - delete the neighbouring node then
 - Link the current node to the node which is next to the deleted node
 - Else this is not then simply move forward the current node.
+> Codestudio questions
 
 ## Remove Duplicates From Sorted List
 ```

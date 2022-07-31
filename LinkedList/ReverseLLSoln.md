@@ -5,11 +5,11 @@
 - Current next stores the previous value 
 - previous shift to current position 
 - then current shift to forward
-- Iterative T.C = 0(n), S.C. = 0(1)
-- Recursive T.C = 0(n), S.C. = 0(n)
+> Codestudio questions
 
 ## Iterative Solution
 ```
+    T.C = 0(n), S.C. = 0(1)
 Node* reverseLinkedList(Node *head)
 {
     if(head == NULL || head -> next == NULL)
@@ -34,6 +34,7 @@ Node* reverseLinkedList(Node *head)
 ## Recursive Solution
 
 ```
+    T.C = 0(n), S.C. = 0(n)
 Node* reverse(Node* head)
 {
     //base case

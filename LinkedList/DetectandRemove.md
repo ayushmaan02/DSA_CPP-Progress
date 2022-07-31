@@ -11,7 +11,8 @@
 - Using FCD we found the position where the two pointers will be intersecting
 - then we shift the slow pointer to the head and then 
 - started to traverse the slow and the that intersection pointer one by one 
-- then after some time they will meet at and where they will be meeting will be the starting node of the loop 
+- then after some time they will meet at and where they will be meeting will be the starting node of the loop
+> Codestudio questions 
 
 ## Detect a loop Using map solution
 ```

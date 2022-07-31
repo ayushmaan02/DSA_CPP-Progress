@@ -3,7 +3,7 @@
 - Step 2 recursive call initiated for the remaining part
 - Step 3 return the prev as the head for the reverse LL will be pointed by that only
 - T.C. O(n) S.C. O(1)
-
+> Codestudio questions
 ## Recursive Solution
 ```
 Node* kReverse(Node* head, int k) {

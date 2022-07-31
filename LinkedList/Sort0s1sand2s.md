@@ -12,6 +12,7 @@
 - Traverse through the list and compare the value at each node and then add it to tail of the node
 - Then merge the all the 0s,1s,2s nodes 
 - Delete all the dummy nodes 
+> Codestudio questions
 
 ## Sort linked list of 0s 1s 2s
 **APPROACH 1**
