@@ -12,3 +12,4 @@
 - [**Sort a LL**](Sort0s1sand2s.md)
 - [**Reverse List In K Groups**](LLReverseKGroups.md)
 - [**Delete a node in LL without using head**](DeleteNodeNoHead.md)
+- [**Megre 2 Sorted LL**](Merge2SortedLL.md)
