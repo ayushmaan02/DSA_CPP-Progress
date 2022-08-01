@@ -8,7 +8,7 @@
 - Find the middle of the LL
 - Then reverse the list which id present after the middle
 - Then compare both the halves of the list (before middle and after mmiddle)
-- Then change the input LL to its original one
+- (**OPTIONAL**) Then change the input LL to its original one
 > GFG Practice
 
 ## Approach 1
@@ -106,7 +106,7 @@
             head1 = head1 -> next;
             head2 = head2 -> next;
         }
-        //Step 4 Repeate the step 2
+        //Step 4 Repeate the step 2 (OPTIONAL)
         temp = middle -> next;
         middle -> next = reverse(temp);
         return true;
