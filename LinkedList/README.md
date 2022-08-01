@@ -4,7 +4,7 @@
 - [**Delete middle of LL**]()
 - [**Detect Loop & Remove loop from a LL**](DetectandRemove.md)
 - [**Reverse a LL**](ReverseLLSoln.md)
-- [**LinkedList is palindrome**]()
+- [**LinkedList is palindrome**](PalindromLL.md)
 - [**Delete duplicates in sorted LL**](RemoveDuplicateFromLL.md)
 - [**Delete the whole LL**]()
 - [**Separate even and odd nodes in a LL**]()
