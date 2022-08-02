@@ -20,7 +20,7 @@
         int start = 0;
         int end = size-1;
 
-        while(start >= end)
+        while(start <= end)
         {
             if(arr[start] != arr[end])
             {
