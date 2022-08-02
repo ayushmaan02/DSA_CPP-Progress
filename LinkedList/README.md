@@ -1,7 +1,7 @@
 # Linked List IMP Question 
 
 - [**Middle of a LinkedList**](MiddleofLL.md)
-- [**Delete middle of LL**]()
+- [**Delete middle of LL**](DeleteMiddleOfLL.md)
 - [**Detect Loop & Remove loop from a LL**](DetectandRemove.md)
 - [**Reverse a LL**](ReverseLLSoln.md)
 - [**LinkedList is palindrome**](PalindromLL.md)
