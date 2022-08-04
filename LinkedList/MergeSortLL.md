@@ -56,7 +56,7 @@
         Node* fast = head -> next;
         Node* slow = head;
 
-        while(fast != NULL)
+        while(fast != NULL && fast -> next != NULL)
         {
             slow = slow -> next;
             fast = fast -> next -> next;
