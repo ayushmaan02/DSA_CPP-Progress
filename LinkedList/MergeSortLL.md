@@ -6,7 +6,7 @@
 
 ## Approach 
 ```
-    T.C. = O(nLogn) S.C. = O(1)
+    T.C. = O(nLogn) S.C. = O(logn)
     //Merge 2 Sorted LL
     Node* merge(Node* left, Node* right)
     {
