@@ -13,7 +13,7 @@
 - [**Megre 2 Sorted LL**](Merge2SortedLL.md)
 - [**Add two numbers represented by Linked List**](Add2NumInLL.md)
 - [**Merger Sort in a LL**](MergeSortLL.md)
-- [**Flatten a Linked List**](FlattenLL.mD)
+- [**Flatten a Linked List**](FlattenLL.md)
 <!-- - [**Delete the whole LL**]() -->
 <!-- - [**Separate even and odd nodes in a LL**]() -->
 <!-- - [**The intersection point of two LL**]() -->
