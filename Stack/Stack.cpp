@@ -1,6 +1,8 @@
 #include <iostream>
 #include <stack>
 using namespace std;
+
+//Stack implementation using Array 
 class Stack
 {
 public:
