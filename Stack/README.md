@@ -3,4 +3,5 @@
 - [**Two Stack**](TwoStack.md) 
 - [**Reverse a stack**](Reverse_a_String.cpp)
 - [**Delete middle element form stack**](DeleteMiddleElement.md)
-- [**Balanced parentheses**]()
+- [**Balanced parentheses**](BalancedParentheses.md)
+- [**Insert an element at its bottom in a given stack**](InsertAtBottomOfStack.md)
