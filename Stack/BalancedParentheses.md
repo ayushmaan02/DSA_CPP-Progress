@@ -8,7 +8,7 @@
 - Else stack is left with element unbalanced return false
 
 
-#
+# Approach
 ```
     T.C. = O(N) S.C.= O(N)
 bool isValidParenthesis(string expression)
