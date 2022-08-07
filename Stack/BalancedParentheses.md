@@ -10,6 +10,7 @@
 
 #
 ```
+    T.C. = O(N) S.C.= O(N)
 bool isValidParenthesis(string expression)
 {
     stack<char> s;
