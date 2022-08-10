@@ -8,6 +8,7 @@
 - If top2 - top1 >1 then for push2 top2-- and add the element to the array
 - If top1 >=0 for pop1 top1--  and display the poped element
 - If top2 < size for pop2 top2++ and display the poped element
+>Code Studio
 
 ```
     For all operations T.C.= O(1) S.C.= O(1)

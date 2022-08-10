@@ -6,7 +6,7 @@
     - Else the stack is empty and closing bracket is present return false then it's unbalanced
 - Out of the loop is stack is empty then return true
 - Else stack is left with element unbalanced return false
-
+>Code Studio
 
 # Approach
 ```
