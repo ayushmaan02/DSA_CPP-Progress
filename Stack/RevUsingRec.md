@@ -3,6 +3,7 @@
 - Store the first element of the of the stack then assume that recursion has sucessfully reversed the rest of the stack
 - Then call insert at bottom function to add the top element to bottom of the stack
 - Then write the Insert at bottom function function
+>Code Studio
 
 ```
     T.C. = O(N^2)
