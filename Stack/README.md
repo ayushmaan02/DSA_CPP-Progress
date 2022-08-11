@@ -7,3 +7,4 @@
 - [**Insert an element at its bottom in a given stack**](InsertAtBottomOfStack.md)
 - [**Reverse a stack using recursion**](RevUsingRec.md)
 - [**Next Smaller Element**](NextSmallerElement.md)
+- [**The Celebrity Problem**](CelebrityProblem.md)
