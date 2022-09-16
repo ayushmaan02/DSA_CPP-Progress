@@ -6,7 +6,7 @@ using namespace std;
 int main()
 {
     priority_queue<int> maxi;                               //Max_heap
-    priority_queue<int,vector<int>, greater<int> > mini;    //Min heap
+    priority_queue<int,vector<int>, greater<int> > mini;    //Min heap (Minimum Priorty queue)
 
     // Maximum heap means allocate the largest element as 1st element  
     maxi.push(1);
