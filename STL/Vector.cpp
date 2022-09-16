@@ -8,7 +8,7 @@ using namespace std;
 int main()
 {
     vector<int> v;
-    vector<int> vec(5,100); //Create a vector 
+    vector<int> vec(5,100); //Create a vector "vec" and will store the first 5 instances with 100 
     v.push_back(1);
     v.push_back(2);
     v.push_back(3);
@@ -31,6 +31,13 @@ int main()
         cout << i << " ";
     }
     cout << endl;
+
+      //Auto will set the iterator of the type which is expected 
+    for (auto it : v)
+    {
+        cout << it << " ";
+    }
+
 
     cout << "Before clear size = " << v.size() << endl;
     v.clear();
